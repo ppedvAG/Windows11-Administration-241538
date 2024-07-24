@@ -1,0 +1,48 @@
+Schritt 2: Erstellen eines neuen Gruppenrichtlinienobjekts (GPO)
+Neues GPO erstellen:
+In der Gruppenrichtlinienverwaltungskonsole, navigiere zum gewünschten Domänennamen.
+Klicke mit der rechten Maustaste auf die Organisationseinheit (OU) oder den Container, auf den das GPO angewendet werden soll (z. B. Test-OU), und wähle Neues GPO in dieser Domäne, und verknüpfen hier.
+Gib dem neuen GPO einen Namen, z. B. Test-GPO.
+Schritt 3: Konfigurieren der Richtlinien
+GPO bearbeiten:
+
+Klicke mit der rechten Maustaste auf das neu erstellte GPO (Test-GPO) und wähle Bearbeiten.
+Desktophintergrund ändern:
+
+Navigiere zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > Desktop > Desktop.
+Doppelklicke auf Desktophintergrund.
+Setze die Richtlinie auf Aktiviert und gib den Pfad zu einem Bild ein, das als Desktophintergrund verwendet werden soll (z. B. C:\Windows\Web\Wallpaper\Windows\img0.jpg).
+Klicke auf Übernehmen und dann auf OK.
+Richtlinie zur Anzeige der Systemsteuerungselemente:
+
+Navigiere zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > Systemsteuerung.
+Doppelklicke auf Nur angegebene Systemsteuerungselemente anzeigen.
+Setze die Richtlinie auf Aktiviert und füge mindestens ein Element hinzu (z. B. System).
+Richtlinie zur Deaktivierung des Task-Managers:
+
+Navigiere zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > System > Strg+Alt+Entf-Optionen.
+Doppelklicke auf Task-Manager entfernen.
+Setze die Richtlinie auf Aktiviert.
+Klicke auf Übernehmen und dann auf OK.
+Richtlinie zur Einschränkung des Zugriffs auf die Eingabeaufforderung:
+
+Navigiere zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > System.
+Doppelklicke auf Eingabeaufforderung deaktivieren.
+Setze die Richtlinie auf Aktiviert und wähle Ja bei Das Ausführen von Batchdateien zulassen oder Nein, um es komplett zu deaktivieren.
+Klicke auf Übernehmen und dann auf OK.
+Richtlinie zur Startseite des Internet Explorers festlegen:
+
+Navigiere zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > Windows-Komponenten > Internet Explorer.
+Doppelklicke auf Startseite festlegen.
+Setze die Richtlinie auf Aktiviert und gib eine URL ein (z. B. http://www.example.com).
+Klicke auf Übernehmen und dann auf OK.
+Schritt 4: Anwenden und Testen des GPOs
+GPO anwenden:
+
+Stelle sicher, dass das GPO mit der gewünschten OU oder dem Container verknüpft ist.
+GPO erzwingen (optional):
+
+Klicke mit der rechten Maustaste auf das GPO und wähle Erzwingen, um sicherzustellen, dass die Richtlinien auf alle Benutzer und Computer in der OU angewendet werden.
+Richtlinien aktualisieren:
+
+Auf einem Client-Computer, der Mitglied der Domäne ist, öffne die Eingabeaufforderung und führe den Befehl gpupdate /force aus, um die Richtlinien sofort zu aktualisieren.
